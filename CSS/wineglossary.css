@@ -1,0 +1,689 @@
+@font-face {
+  font-family: 'camiro';
+  src: url("../FONTS/Camiro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'carmilla';
+  src: url('../FONTS/newfont-july/Carmilla.ttf') format('truetype');
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box !important;
+  font-family: 'camiro', sans-serif;
+  transition: ease all 0.5s;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("../IMAGES/ahtziri-lagarde.jpg") no-repeat ;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center top;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'camiro', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  box-shadow: inset 0 0 6px #0000001a;
+}
+
+/* -------------------- Navbar -------------------- */
+.navbar {
+  font-family: 'carmilla', sans-serif;
+  width: 100%;
+  padding: 0 40px;
+  background: #00000028;
+  backdrop-filter: blur(15px);
+}
+
+.navbar a{
+  font-family: 'carmilla', sans-serif;
+}
+
+.navdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img{
+  float: left;
+  width: 10%;
+  height: 10%;
+  margin-left: 20px;
+}
+
+.logo a {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bolder;
+  color: aliceblue;
+  padding-left: 10px;
+  padding-top: 15px; 
+  font-family: 'camiro', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px; 
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: rgba(240, 248, 255, 0.567);
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s;
+  font-family: 'carmilla', sans-serif;
+}
+
+
+li {
+  display: inline-block;
+}
+
+li a {
+  color: aliceblue;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 25px;
+  font-family: 'carmilla', sans-serif;
+}
+
+.navbar li a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  font-size: 15px;
+  font-weight: bold;
+  color: aliceblue;
+  border-radius: 1em;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  font-family: 'carmilla', sans-serif;
+}
+
+.navbar li a:hover {
+  font-family: 'carmilla', sans-serif;
+  color: rgb(100, 100, 100);
+  background-color: rgb(186, 186, 186); 
+  box-shadow:
+    0 0 1em 0.25em rgb(186, 186, 186), 
+    0 0 4em 2em rgba(127, 127, 127, 0.781), 
+    inset 0 0 0.75em 0.25em rgb(186, 186, 186); 
+
+}
+/* -------------------- dropdownzzzzzzzzzzzz sheee -------------------- */
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 0;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 3;
+}
+
+.dropdown-menu li {
+  display: block;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 10px;
+  color: #fff;
+  transition: background 0.3s;
+  font-family: 'carmilla', sans-serif;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ffe6bc;
+  color: black;
+
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+/* -------------------- Containers -------------------- */
+.container1 {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -9999; 
+    pointer-events: none; 
+}
+
+.container2 {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 0 15px 45px;
+  margin: 250px auto 0;
+  z-index: 2;
+}
+
+.container3 {
+  margin: 50px;
+  background-color: #00000073;
+  border-radius: 2.5rem;
+  backdrop-filter: blur(15px);
+}
+
+/* -----------------------------------------Banner  section */
+#wine-banner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  background: #00000000 no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center top;
+  overflow-x: hidden;
+  padding: 0rem 2rem;
+  padding-top: 6%;
+  padding-bottom: 4rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  pointer-events: none;
+
+}
+
+/* === Individual Wine Card === */
+.wine-card1 {
+    position: relative;
+  width: 280px;
+  background-image: url(../IMAGES/wine-bottle1.png); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-height: 360px;
+}
+
+.wine-card2 {
+    position: relative;
+  width: 280px;
+  background-image: url(../IMAGES/wine-bottle2.png); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-height: 360px;
+}
+
+.wine-card3 {
+    position: relative;
+  width: 280px;
+  background-image: url(../IMAGES/wine-bottle3.png); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-height: 360px;
+}
+.wine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(7, 209, 224, 0); 
+}
+
+
+.wine-card4 {
+    position: relative;
+  width: 280px;
+  background-image: url(../IMAGES/wine-bottle4.png); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  min-height: 360px;
+}
+
+@media screen and (max-width: 768px) {
+  #wine-banner {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .wine-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.wine-card:nth-child(odd) {
+  margin-top: -30px;
+}
+
+.wine-card:nth-child(even) {
+  margin-top: 30px;
+}
+.wine-card1:hover,
+.wine-card2:hover,
+.wine-card3:hover,
+.wine-card4:hover {
+  transform: translateY(-20px) scale(1.10);
+  box-shadow: 0 0 25px rgba(7, 209, 224, 0);
+}
+
+
+
+/* -------------------- Carousel Cards -------------------- */
+.carousel {
+  position: relative;
+  overflow: visible; /* Allow the scaling effect to show */
+  padding-top: 2rem; /* Add space for top grow */
+  padding-bottom: 2rem; /* Add space for bottom grow */
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 100px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+}
+
+#carousel-track {
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  display: flex;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 250px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-image: linear-gradient(45deg, gold, #ffcc00, #ffd700) 15px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px gold, 0 0 20px gold inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .wine-image {
+  opacity: 0;
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover img {
+  opacity: 0;
+}
+
+.card .text-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .text-content {
+  opacity: 1;
+}
+
+.card .text-content h3 {
+  font-size: 22px;
+  margin: 0 0 10px;
+  color: gold;
+}
+
+.card .text-content p {
+  font-size: 14px;
+  color: #ddd;
+}
+.carousel-controls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  gap: 20px;
+}
+
+.carousel-controls button {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.carousel-controls button:hover {
+  background-color: #e60023;
+  color: white;
+}
+.wine-card:first-child::before {
+  content: "POP Y VERTIDO";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.wine-card:first-child .logo,
+.wine-card:first-child h2,
+.wine-card:first-child p {
+  position: relative;
+  z-index: 1;
+}
+
+/*------------------------------------- ✨  */
+.card::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 215, 0, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: verticalShine 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+
+.card:nth-child(1)::after { animation-delay: 0s; }
+.card:nth-child(2)::after { animation-delay: 1.2s; }
+.card:nth-child(3)::after { animation-delay: 2.4s; }
+.card:nth-child(4)::after { animation-delay: 0.8s; }
+.card:nth-child(5)::after { animation-delay: 1.6s; }
+.card:nth-child(6)::after { animation-delay: 2.9s; }
+.card:nth-child(7)::after { animation-delay: 1s; }
+.card:nth-child(8)::after { animation-delay: 3.4s; }
+.card:nth-child(9)::after { animation-delay: 0.4s; }
+.card:nth-child(10)::after { animation-delay: 2s; }
+
+/* Duplicatioins */
+.card:nth-child(11)::after { animation-delay: 1.5s; }
+.card:nth-child(12)::after { animation-delay: 3s; }
+.card:nth-child(13)::after { animation-delay: 0.5s; }
+@keyframes verticalShine {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 150%;
+  }
+}
+
+/* --------------------     Bubbles -------------------- */
+.bubbles {
+  justify-content: center;
+  position: relative;
+  display: flex;
+}
+
+.bubbles span {
+  width: 30px;
+  height: 30px;
+  background: #470a0a;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #470a0a44, 0 0 50px #470a0a, 0 0 100px #470a0a;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(120s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background: #ff2d2d;
+  box-shadow: 0 0 0 10px #ff2d2d44, 0 0 50px #ff2d2d, 0 0 100px #ff2d2d;
+  animation-duration: calc(120s / var(--i));
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+
+
+
+/* -------------------- FOOOOOOOOOOOOOOOTERRRRRRAAAAA -------------------- */
+
+
+
+.footer {
+  margin-top: 100px;
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.465);
+  font-family: 'carmilla', sans-serif;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.footer-socials {
+  margin-bottom: 20px;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin: 0 10px;
+  color: rgba(0, 0, 0, 0.374);
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  font-family: 'carmilla', sans-serif;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  background: #ffe6bc;
+  color: black;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-family: 'carmilla', sans-serif;
+}
+
+.footer-links a:hover {
+  color: gold;
+}
+
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.7;
+
+    font-family: 'carmilla', 'Arial', serif;
+}
+
+.footer-logo img {
+  width: 2.5%;
+  height: 2.5%;
+  margin-left: 20px;
+}
+
+
+.footer-socials a[href*="fb.com"]:hover {
+  color: #146cdf; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="twitter.com"]:hover {
+  color: #1DA1F2; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="youtube.com"]:hover {
+  color: #FF0000; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="Reddit.com"]:hover {
+  color: #FF4500; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="discord.com"]:hover {
+  color: #5865F2;
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="tiktok.com"]:hover {
+  color: #000000; 
+  background: white;
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+/* -------------------- home banner -------------------- */
+
+
+
+
+.homebanner {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2.5rem;
+  padding: 0px 10px;
+  margin: 50px auto 0;
+  background-blend-mode: lighten;
+}
+
+.homebanner img {
+  width: 100%;
+  height: auto;
+}

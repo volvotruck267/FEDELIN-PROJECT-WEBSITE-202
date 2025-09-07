@@ -1,0 +1,655 @@
+@font-face {
+  font-family: 'camiro';
+  src: url("../FONTS/Camiro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'carmilla';
+  src: url('../FONTS/newfont-july/Carmilla.ttf') format('truetype');
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box !important;
+  font-family: 'camiro', sans-serif;
+  transition: ease all 0.5s;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("../IMAGES/ahtziri-lagarde.jpg") no-repeat ;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center top;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'camiro', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  box-shadow: inset 0 0 6px #0000001a;
+}
+
+/* -------------------- Navbar -------------------- */
+.navbar {
+  font-family: 'carmilla', sans-serif;
+  width: 100%;
+  padding: 0 40px;
+  background: #00000028;
+  backdrop-filter: blur(15px);
+}
+
+.navbar a{
+  font-family: 'carmilla', sans-serif;
+}
+
+.navdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img{
+  float: left;
+  width: 10%;
+  height: 10%;
+  margin-left: 20px;
+}
+
+.logo a {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bolder;
+  color: aliceblue;
+  padding-left: 10px;
+  padding-top: 15px; 
+  font-family: 'camiro', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px; 
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: rgba(240, 248, 255, 0.567);
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s;
+  font-family: 'carmilla', sans-serif;
+}
+
+
+li {
+  display: inline-block;
+}
+
+li a {
+  color: aliceblue;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 25px;
+  font-family: 'carmilla', sans-serif;
+}
+
+.navbar li a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  font-size: 15px;
+  font-weight: bold;
+  color: aliceblue;
+  border-radius: 1em;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  font-family: 'carmilla', sans-serif;
+}
+
+.navbar li a:hover {
+  font-family: 'carmilla', sans-serif;
+  color: rgb(100, 100, 100);
+  background-color: rgb(186, 186, 186); 
+  box-shadow:
+    0 0 1em 0.25em rgb(186, 186, 186), 
+    0 0 4em 2em rgba(127, 127, 127, 0.781), 
+    inset 0 0 0.75em 0.25em rgb(186, 186, 186); 
+
+}
+/* -------------------- dropdownzzzzzzzzzzzz sheee -------------------- */
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 0;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 3;
+}
+
+.dropdown-menu li {
+  display: block;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 10px;
+  color: #fff;
+  transition: background 0.3s;
+  font-family: 'carmilla', sans-serif;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ffe6bc;
+  color: black;
+
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+/* -------------------- Containers -------------------- */
+.container1 {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+.container2 {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 0 15px 45px;
+  margin: 250px auto 0;
+  z-index: 2;
+}
+
+.container3 {
+  margin: 50px;
+  background-color: #00000073;
+  border-radius: 2.5rem;
+  backdrop-filter: blur(15px);
+}
+
+
+
+
+
+
+/* -------------------- 3D Wine Cards -------------------- */
+.wine-cards-section {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 60px;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardsectiontitle{
+    font-weight: none;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    perspective: 1000px;
+    padding: 40px 20px;
+    justify-items: center;
+}
+.wine-card {
+    width: 280px; 
+    height: 350px; 
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.wine-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.wine-card:hover {
+    transform: translateY(-15px) scale(1.08);
+    z-index: 10;
+}
+
+.wine-card:hover .card-back {
+    animation: gradientMove 4s ease infinite;
+}
+
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+.card-front {
+    background: linear-gradient(0deg,  #521e25d8,#460000, #a0512d00, #a0512d00);
+    color: white;
+}
+.card-front a{
+    font-family: 'carmilla', sans-serif;
+    font-style: italic;
+    font-weight: none;
+}
+
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    
+    /* Keep original background */
+    background: linear-gradient(-145deg, #460000, #521e25, #A0522D);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    
+    color: white;
+    transform: rotateY(180deg);
+}
+.card-back a {
+  font-style: italic;
+}
+.card-back::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(45deg, #ff4444, #ff0000, #da5454, #ff0000, #af3232);
+    background-size: 400% 400%;
+    border-radius: 25px;
+    z-index: -1;
+    filter: blur(15px);
+    animation: glowing 10s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0% 50%;
+        filter: blur(15px) brightness(1);
+    }
+    25% {
+        background-position: 100% 0%;
+        filter: blur(20px) brightness(1.3);
+    }
+    50% {
+        background-position: 100% 100%;
+        filter: blur(15px) brightness(0.8);
+    }
+    75% {
+        background-position: 0% 100%;
+        filter: blur(18px) brightness(1.1);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: blur(15px) brightness(1);
+    }
+}
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+.wine-card a {
+    font-family: 'carmilla', sans-serif;
+    font-size: 1.4rem;
+    margin: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.vintage {
+    font-family: 'carmilla', sans-serif;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 8px 0;
+    color: #FFE4B5;
+}
+.description {
+    font-family: 'carmilla', sans-serif;
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 18px 0;
+    line-height: 1.5;
+    color: #F5F5DC;
+}
+.price {
+    font-family: 'carmilla', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d1a63a;
+    margin: 15px 0 0 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Blur effect heree */
+.cards-container:hover .wine-card:not(:hover) {
+    filter: blur(3px) brightness(0.6);
+    transform: scale(0.92);
+}
+@media (max-width: 1200px) {
+    .cards-container {
+        max-width: 1000px;
+        gap: 20px;
+    }
+    
+    .wine-card {
+        height: 280px;
+    }
+}
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .wine-card {
+        height: 250px;
+    }
+}
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(16, 1fr);
+        gap: 12px;
+    }
+    
+    .wine-card {
+        height: 220px;
+    }
+}
+.wine-bottle {
+  width: auto;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    animation: float 3s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*.wine-image {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+*/
+.wine-image {
+    width: auto;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+.wine-image:hover {
+    transform: scale(1.05);
+}
+
+
+.region {
+    font-family: 'carmilla', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 5px 0;
+    color: #E6E6FA;
+    font-style: italic;
+}
+.description{
+  font-style: italic;
+
+}
+.details {
+    font-family: 'carmilla', sans-serif;
+    font-size: 0.85rem;
+    margin: 8px 0;
+    color: #F0F8FF;
+  font-style: italic;
+}
+.pairing {
+    font-family: 'carmilla', sans-serif;
+    font-size: 0.8rem;
+    margin: 8px 0;
+    color: #FFE4E1;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+/* -----------------------------------------     Bubbles ----------------------------------- */
+.bubbles {
+  justify-content: center;
+  position: relative;
+  display: flex;
+  z-index: -3;
+}
+
+.bubbles span {
+  width: 30px;
+  height: 30px;
+  background: #470a0a;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #470a0a44, 0 0 50px #470a0a, 0 0 100px #470a0a;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(120s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background: #ff2d2d;
+  box-shadow: 0 0 0 10px #ff2d2d44, 0 0 50px #ff2d2d, 0 0 100px #ff2d2d;
+  animation-duration: calc(120s / var(--i));
+  z-index: -3;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+
+
+
+/* -------------------- FOOOOOOOOOOOOOOOTERRRRRRAAAAA -------------------- */
+
+
+
+.footer {
+  margin-top: 100px;
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.465);
+  font-family: 'carmilla', sans-serif;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.footer-socials {
+  margin-bottom: 20px;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin: 0 10px;
+  color: rgba(0, 0, 0, 0.374);
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  font-family: 'carmilla', sans-serif;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  background: #ffe6bc;
+  color: black;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-family: 'carmilla', sans-serif;
+}
+
+.footer-links a:hover {
+  color: gold;
+}
+
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.7;
+
+    font-family: 'carmilla', 'Arial', serif;
+}
+
+.footer-logo img {
+  width: 2.5%;
+  height: 2.5%;
+  margin-left: 20px;
+}
+
+
+.footer-socials a[href*="fb.com"]:hover {
+  color: #146cdf; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="twitter.com"]:hover {
+  color: #1DA1F2; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="youtube.com"]:hover {
+  color: #FF0000; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="Reddit.com"]:hover {
+  color: #FF4500; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="discord.com"]:hover {
+  color: #5865F2;
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="tiktok.com"]:hover {
+  color: #000000; 
+  background: white;
+  transform: scale(1.2);
+}
+
+
+
+#musicControl {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#musicControl.show {
+    opacity: 1;
+    visibility: visible;
+}
+#musicControl button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+#musicControl button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

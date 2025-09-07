@@ -1,0 +1,457 @@
+@font-face {
+  font-family: 'camiro';
+  src: url("../FONTS/Camiro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'carmilla';
+  src: url('../FONTS/newfont-july/Carmilla.ttf') format('truetype');
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box !important;
+  font-family: 'camiro', sans-serif;
+  transition: ease all 0.5s;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("../IMAGES/ahtziri-lagarde.jpg") no-repeat ;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center top;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'camiro', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  box-shadow: inset 0 0 6px #0000001a;
+}
+
+/* -------------------- Navbar -------------------- */
+.navbar {
+  font-family: 'carmilla', sans-serif;
+  width: 100%;
+  padding: 0 40px;
+  background: #00000028;
+  backdrop-filter: blur(15px);
+}
+
+.navbar a{
+  font-family: 'carmilla', sans-serif;
+}
+
+.navdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img{
+  float: left;
+  width: 10%;
+  height: 10%;
+  margin-left: 20px;
+}
+
+.logo a {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bolder;
+  color: aliceblue;
+  padding-left: 10px;
+  padding-top: 15px; 
+  font-family: 'camiro', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px; 
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: rgba(240, 248, 255, 0.567);
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.3s;
+  font-family: 'carmilla', sans-serif;
+}
+
+
+li {
+  display: inline-block;
+}
+
+li a {
+  color: aliceblue;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 25px;
+  font-family: 'carmilla', sans-serif;
+}
+
+.navbar li a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  font-size: 15px;
+  font-weight: bold;
+  color: aliceblue;
+  border-radius: 1em;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  font-family: 'carmilla', sans-serif;
+}
+
+.navbar li a:hover {
+  font-family: 'carmilla', sans-serif;
+  color: rgb(100, 100, 100);
+  background-color: rgb(186, 186, 186); 
+  box-shadow:
+    0 0 1em 0.25em rgb(186, 186, 186), 
+    0 0 4em 2em rgba(127, 127, 127, 0.781), 
+    inset 0 0 0.75em 0.25em rgb(186, 186, 186); 
+
+}
+/* -------------------- dropdownzzzzzzzzzzzz sheee -------------------- */
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 0;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 3;
+}
+
+.dropdown-menu li {
+  display: block;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 10px;
+  color: #fff;
+  transition: background 0.3s;
+  font-family: 'carmilla', sans-serif;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ffe6bc;
+  color: black;
+
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+/* -------------------- Containers -------------------- */
+.container1 {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+.container2 {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 0 15px 45px;
+  margin: 250px auto 0;
+  z-index: 2;
+}
+
+.container3 {
+  margin: 50px;
+  background-color: #00000073;
+  border-radius: 2.5rem;
+  backdrop-filter: blur(15px);
+}
+
+
+/* -------------------- About Section -------------------- */
+
+.image-container {
+  width: 100%;
+  text-align: center;
+  padding: 1px 0;
+  background: black;
+  z-index: -9999;
+}
+.main-wine-image {
+  max-width: 60%;
+  height: auto;
+  z-index: -9999;
+}
+
+/* -------------------- About Section -------------------- */
+.about_section {
+  position: relative;
+  z-index: -2;
+  background: rgba(0, 0, 0, 0.641);
+
+}
+
+.about_taital_main {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: 'carmilla', sans-serif;
+}
+.col-md-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  border: solid 50px transparent;
+}
+.about_taital {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'carmilla', sans-serif;
+}
+
+.about_text {
+  font-size: 18px;
+  color: #ffffff;
+  padding-top: 40px;
+    font-family: 'carmilla', sans-serif;
+}
+
+/* -------------------- Rows and Layout -------------------- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-fluid {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2.5rem;
+  padding: 1px 15px;
+margin: 0 auto;
+  background-blend-mode: lighten;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  border: solid 50px transparent;
+}
+
+.about_img {
+  width: 580px;
+  height: 381px;
+  display: block;
+  background: linear-gradient(45deg,#BE630A, #000000,#470a0a);
+  padding: 4px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* ----------------------     Signature   -------------------- */
+.sign1 {
+  color: #ffffff;
+}
+
+.sign1 a {
+  color: #ffffff;
+}
+
+.sign1 a:hover {
+  color: #000000;
+}
+
+/* --------------------     Bubbles -------------------- */
+.bubbles {
+  justify-content: center;
+  position: relative;
+  display: flex;
+  z-index: -3;
+}
+
+.bubbles span {
+  width: 30px;
+  height: 30px;
+  background: #470a0a;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #470a0a44, 0 0 50px #470a0a, 0 0 100px #470a0a;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(120s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background: #ff2d2d;
+  box-shadow: 0 0 0 10px #ff2d2d44, 0 0 50px #ff2d2d, 0 0 100px #ff2d2d;
+  animation-duration: calc(120s / var(--i));
+  z-index: -3;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+
+
+
+/* -------------------- FOOOOOOOOOOOOOOOTERRRRRRAAAAA -------------------- */
+
+
+
+.footer {
+  margin-top: 100px;
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.465);
+  font-family: 'carmilla', sans-serif;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.footer-socials {
+  margin-bottom: 20px;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin: 0 10px;
+  color: rgba(0, 0, 0, 0.374);
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  font-family: 'carmilla', sans-serif;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  background: #ffe6bc;
+  color: black;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-family: 'carmilla', sans-serif;
+}
+
+.footer-links a:hover {
+  color: gold;
+}
+
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.7;
+
+    font-family: 'carmilla', 'Arial', serif;
+}
+
+.footer-logo img {
+  width: 2.5%;
+  height: 2.5%;
+  margin-left: 20px;
+}
+
+
+.footer-socials a[href*="fb.com"]:hover {
+  color: #146cdf; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="twitter.com"]:hover {
+  color: #1DA1F2; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="youtube.com"]:hover {
+  color: #FF0000; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="Reddit.com"]:hover {
+  color: #FF4500; 
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="discord.com"]:hover {
+  color: #5865F2;
+  background: white;
+  transform: scale(1.2);
+}
+.footer-socials a[href*="tiktok.com"]:hover {
+  color: #000000; 
+  background: white;
+  transform: scale(1.2);
+}
+
+
+/* -------------------- home banner -------------------- */
+
+
+
+
+.homebanner {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2.5rem;
+  padding: 0px 10px;
+  margin: 50px auto 0;
+  background-blend-mode: lighten;
+}
+
+.homebanner img {
+  width: 100%;
+  height: auto;
+}
